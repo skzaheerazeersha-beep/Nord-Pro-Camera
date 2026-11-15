@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fx-991ES PLUS 2nd edition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="fx991">
+  <div class="calc">
+    <div class="brand-row"><span class="brand">CASIO</span>
+      <span class="solar"><i></i><i></i><i></i><i></i></span></div>
+    <div class="model-row">
+      <span class="model">fx-991ES PLUS<br><em>natural-v.p.a.m.</em></span>
+      <span class="edition">2nd edition</span></div>
+    <div class="lcd"><div class="lcd-inner" id="lcd">
+      <div class="indicators"><span class="l">
+        <span id="i-s" style="visibility:hidden">S</span>
+        <span id="i-a" style="visibility:hidden">A</span>
+        <span id="i-m" style="visibility:hidden">M</span>
+        <span id="i-sto" style="visibility:hidden">STO</span>
+        <span id="i-rcl" style="visibility:hidden">RCL</span></span>
+        <span class="r">
+        <span id="i-fmt" style="visibility:hidden"></span>
+        <span id="i-hist" style="visibility:hidden">&#9650;&#9660;</span>
+        <span id="i-ang">D</span><span id="i-math">Math</span></span></div>
+      <div class="line expr" id="expr"></div>
+      <div class="line result" id="result"></div>
+    </div></div>
+    <div class="note" id="note"></div>
+    <div class="keys">
+      <button class="k shift" data-k="__shift">SHIFT</button>
+      <button class="k alpha" data-k="__alpha">ALPHA</button>
+      <div class="replay">
+        <button class="pad up" data-k="up">&#9650;</button>
+        <button class="pad dn" data-k="down">&#9660;</button>
+        <button class="pad lf" data-k="left">&#9664;</button>
+        <button class="pad rt" data-k="right">&#9654;</button>
+        <div class="ctr">REPLAY</div></div>
+      <button class="k dark" data-k="mode">MODE<br><small>SETUP</small></button>
+      <button class="k dark" data-k="on">ON</button>
+
+      <button class="k" data-k="calc"><span class="sh">SOLVE =</span>CALC</button>
+      <button class="k" data-k="integ"><span class="sh">d/dx</span>&#8747;dx</button>
+      <button class="k" data-k="fact"><span class="sh">x&#8730;</span>x!</button>
+      <button class="k" data-k="pol">Pol(</button>
+      <button class="k" data-k="rec">Rec(</button>
+      <button class="k" data-k="logb"><span class="sh">10&#94;&#9634;</span>log&#9634;</button>
+
+      <button class="k" data-k="frac"><span class="sh">d/c</span>a b/c</button>
+      <button class="k" data-k="sqrt"><span class="sh">&#179;&#8730;</span>&#8730;</button>
+      <button class="k" data-k="sq"><span class="sh">x&#179;</span>x&#178;</button>
+      <button class="k" data-k="pow"><span class="sh">x&#8730;</span>x&#94;&#9644;</button>
+      <button class="k" data-k="log"><span class="sh">10&#94;x</span>log</button>
+      <button class="k" data-k="ln"><span class="sh">e&#94;x</span>ln</button>
+
+      <button class="k" data-k="neg"><span class="sh">Abs</span><span class="al">A</span>(&#8722;)</button>
+      <button class="k" data-k="dms"><span class="sh">DMS</span><span class="al">B</span>&#176; ' "</button>
+      <button class="k" data-k="hyp"><span class="al">C</span>hyp</button>
+      <button class="k" data-k="sin"><span class="sh">sin&#8315;&#185;</span><span class="al">D</span>sin</button>
+      <button class="k" data-k="cos"><span class="sh">cos&#8315;&#185;</span><span class="al">E</span>cos</button>
+      <button class="k" data-k="tan"><span class="sh">tan&#8315;&#185;</span><span class="al">F</span>tan</button>
+
+      <button class="k" data-k="rcl"><span class="sh">STO</span>RCL</button>
+      <button class="k" data-k="eng"><span class="sh">&#9664;</span>ENG</button>
+      <button class="k" data-k="open"><span class="sh">%</span>(</button>
+      <button class="k" data-k="close">)</button>
+      <button class="k" data-k="sd"><span class="sh">a b/c&#8660;d/c</span>S&#8660;D</button>
+      <button class="k" data-k="mplus"><span class="sh">M&#8722;</span><span class="al">M</span>M+</button>
+
+      <button class="k num" data-k="7"><span class="sh">CONST</span>7</button>
+      <button class="k num" data-k="8"><span class="sh">CONV</span>8</button>
+      <button class="k num" data-k="9"><span class="sh">CLR</span>9</button>
+      <button class="k del w3" data-k="del"><span class="sh">INS</span>DEL</button>
+      <button class="k ac w3" data-k="ac"><span class="sh">OFF</span>AC</button>
+
+      <button class="k num" data-k="4"><span class="sh">MATRIX</span>4</button>
+      <button class="k num" data-k="5"><span class="sh">VECTOR</span>5</button>
+      <button class="k num" data-k="6"><span class="sh">nPr</span>6</button>
+      <button class="k num w3" data-k="mul"><span class="sh">nCr</span>&#215;</button>
+      <button class="k num w3" data-k="div">&#247;</button>
+
+      <button class="k num" data-k="1"><span class="sh">STAT</span>1</button>
+      <button class="k num" data-k="2"><span class="sh">CMPLX</span>2</button>
+      <button class="k num" data-k="3"><span class="sh">BASE</span>3</button>
+      <button class="k num w3" data-k="add">+</button>
+      <button class="k num w3" data-k="sub">&#8722;</button>
+
+      <button class="k num" data-k="0"><span class="sh">Rnd</span>0</button>
+      <button class="k num" data-k="dot"><span class="sh">Ran#</span>&#183;</button>
+      <button class="k num" data-k="exp"><span class="sh">&#960;</span><span class="al">X</span>&#215;10&#94;x</button>
+      <button class="k num w3" data-k="ans"><span class="sh">e</span><span class="al">Y</span>Ans</button>
+      <button class="k num w3" data-k="eq"><span class="sh">DRG&#9654;</span>=</button>
+    </div>
+    <div class="menu hidden" id="menu"></div>
+  </div>
+  <div class="stage-note">Click keys or type &#183; Enter = &#183; Esc = AC &#183; &#8592;&#8594; edit, &#8593;&#8595; history &#183; 100% offline</div>
+</div>
+<script src="calc-engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
